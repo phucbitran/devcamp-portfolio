@@ -24,6 +24,11 @@ class PortfoliosController < ApplicationController
 			render :edit
 		end
 	end
+	def destroy
+		@portfolio_item.destroy
+
+		redirect_to @portfolio_item
+	end
 	private 
 	def set_portfolio
 		@portfolio_item = Portfolio.find(params[:id])
