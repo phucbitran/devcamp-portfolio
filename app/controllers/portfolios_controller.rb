@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-	# before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+	before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
 	def index
 		@portfolio_item = Portfolio.all
 	end
@@ -12,6 +12,16 @@ class PortfoliosController < ApplicationController
 			redirect_to portfolios_path, notice: 'Portfolio item was successfully created.'
 		else
 			render :new
+		end
+	end
+	def edit
+	end
+	
+	def update
+		if @portfolio_item.update(portfolio_params)
+			redirect_to portfolios_url, notice: 'Portfolio item was successfully created.'
+		else 
+			render :edit
 		end
 	end
 	private 
