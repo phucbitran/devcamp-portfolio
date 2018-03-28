@@ -5,3 +5,8 @@
 	<%= image_tag @portfolio_item.main_image %> 
 	<!-- <%= image_tag @portfolio_item.thumb_image %> -->
 	<%= link_to 'Back', portfolios_path %> 
+
+<h2> Technologies Used:</h2>
+<% @portfolio_item.technologies.each do |t| %>
+ <p> <%= t.name %> </p>
+<% end %>
