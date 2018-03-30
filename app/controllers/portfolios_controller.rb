@@ -11,6 +11,9 @@ class PortfoliosController < ApplicationController
 		@portfolio_item = Portfolio.new
 		3.times { @portfolio_item.technologies.build }
 	end
+	def show
+		@page_title = @portfolio_item.title
+	end
 	def create
 		@portfolio_item = Portfolio.new(portfolio_params)
 		if @portfolio_item.save
