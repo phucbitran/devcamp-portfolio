@@ -13,6 +13,7 @@ class PortfoliosController < ApplicationController
 	end
 	def show
 		@page_title = @portfolio_item.title
+		
 	end
 	def create
 		@portfolio_item = Portfolio.new(portfolio_params)
