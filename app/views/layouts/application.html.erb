@@ -17,10 +17,11 @@
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= render 'shared/application_nav' %>
-    <%= login_helper %>
+    
 
     <%= yield %>
-    <%= @coppyright %>
+    
+    <%= render 'shared/application_footer' %>
     <%= source_helper("application") %>
   </div>
   </body>
