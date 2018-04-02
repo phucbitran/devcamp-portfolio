@@ -45,7 +45,7 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 55em;
 }
 
 
@@ -54,10 +54,12 @@ body {
  */
 .masthead {
   margin-bottom: 2rem;
+
 }
 
 .masthead-brand {
   margin-bottom: 0;
+  margin-right: 80px;
 }
 
 .nav-masthead .nav-link {
@@ -111,3 +113,13 @@ body {
   color: rgba(255, 255, 255, .5);
 }
 
+/*
+ * Custom style
+ */
+ .card-body{
+ color: black;
+ text-align: left;
+ }
+ .auth-links a {
+  color: black;
+ }
